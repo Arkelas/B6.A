@@ -1,0 +1,15 @@
+---
+- name: add user with ssh key
+  user:
+    name: user5
+    shell: /bin/bash
+
+- name: deploy ssh key
+  authorized_key:
+    user: user5
+    key: '{{ item }}' 
+    state: present
+  with_file:
+    - id_rsa.pub
+
+    

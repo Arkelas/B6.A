@@ -1,0 +1,6 @@
+---
+- hosts: test-nginx
+  become: true
+  roles:
+  - users
+ 

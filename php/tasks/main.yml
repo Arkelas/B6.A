@@ -1,0 +1,7 @@
+---
+- name: install packages 
+  apt:
+    name: 
+      - php-fpm
+    state: latest
+
